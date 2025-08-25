@@ -1,0 +1,23 @@
+class Mess:
+    def __init__(self, username):
+        self.username = username
+        self.yes_count = 0
+        self.no_count = 0
+        self.rem=30
+
+    def respond(self, response):
+        if response == 1:
+            self.yes_count += 1
+            self.rem-=1
+            print(f"{self.username} Thanks!")
+        elif response== 0:
+            self.no_count += 1
+            print(f"{self.username} said NO.")
+        else:
+            print("Invalid response. Please enter 1 or 0.")
+
+    def details(self):
+        print(f"Username: {self.username}")
+        print(f"Total YES: {self.yes_count}")
+        print(f"Total NO: {self.no_count}")
+        print(f"Remaining plates: {self.rem}")
